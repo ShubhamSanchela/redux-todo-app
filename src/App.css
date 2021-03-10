@@ -2,6 +2,16 @@
   text-align: center;
 }
 
+.data{
+  color: aliceblue;
+  background-color: black;
+}
+
+.list-data{
+  color: aliceblue;
+  background-color: brown;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
