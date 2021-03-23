@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import "./App.css"
+import "./App.css";
+import Workouts from "./components/Workouts";
 
 const Todos = () => {
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ const Todos = () => {
   return (
     <ul className="list-data">
       {todos.map((todo) => (
-        <li  onClick={ () => handleClick(todo.id)}>{todo.label}</li>
+        <li onClick={() => handleClick(todo.id)}>{todo.label}</li>
       ))}
     </ul>
   );
@@ -30,7 +31,7 @@ const TodoInput = () => {
     setNewTodo(event.target.value);
   };
 
-  const handleClick = () =>
+  const handleClick = () => {
     dispatch({
       type: "ADD_TODO",
       payload: {
@@ -38,20 +39,25 @@ const TodoInput = () => {
         id: Math.ceil(Math.random() * 100),
       },
     });
+  };
   return (
     <>
       <input type="text" value={newTodo} onChange={handle} />
-      <br/>
-      <button className="btn btn-primary mt-2" onClick={handleClick}>Add Todo</button>
+      <br />
+      <button className="btn btn-primary mt-2" onClick={handleClick}>
+        Add Todo
+      </button>
     </>
   );
 };
 
 function App() {
   return (
-    <div className="App" style={{textAlign : "center"}}>
-      <Todos />
-      <TodoInput />
+    <div className="App" style={{ textAlign: "center" }}>
+      {/* <Todos />
+      <TodoInput /> */}
+      <h1>Work Tracer</h1>
+      <Workouts />
     </div>
   );
 }
