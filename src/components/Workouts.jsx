@@ -12,7 +12,7 @@ function Workouts() {
   return (
     <div>
       <h2>My Workouts</h2>
-      <button onClick={() => setAdd(!add)} >Add Activity</button>
+      <button className="btn btn-primary mb-2" onClick={() => setAdd(!add)} >Add Activity</button>
       <br/>
       {add && <AddACtivity />}
       {allActivities.map((activity) => {

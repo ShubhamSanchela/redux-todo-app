@@ -14,8 +14,8 @@ function Activity(props) {
   return (
     <div>
       <div >
-        Activity :{props.name}, Duration : {props.duration}
-        <button onClick={deleteActivity}>Delete</button>
+        <b>Activity :</b> {props.name}, <b>Duration :</b>  {props.duration}
+        <button className="btn btn-primary mt-4" style={{ marginLeft: "10px", marginBottom: "10px" }} onClick={deleteActivity}>Delete</button>
       </div>
     </div>
   );

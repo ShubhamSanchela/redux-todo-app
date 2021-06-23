@@ -56,7 +56,6 @@ function App() {
     <div className="App" style={{ textAlign: "center" }}>
       {/* <Todos />
       <TodoInput /> */}
-      <h1>Work Tracer</h1>
       <Workouts />
     </div>
   );

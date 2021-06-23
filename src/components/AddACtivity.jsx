@@ -28,26 +28,28 @@ function AddACtivity() {
   return (
     <div className="activity-input">
       <div >
-        <p>Activity :</p>
+        <b><p>Activity :</p></b>
         <input
           onChange={handleChange}
           type="text"
           name="name"
           placeholder="Add a activity..."
+          style={{ marginRight: "10px" }}
         />
       </div>
-      <br/>
+      <br />
       <div >
-        <p>Duration :</p>
+        <b><p>Duration :</p></b>
         <input
           onChange={handleChange}
           type="text"
           name="duration"
           placeholder="Activity Name..."
+          style={{ marginRight: "10px", marginBottom: "10px" }}
         />
       </div>
-      <br/>
-      <button className="btn" onClick={addAvtivity}>Add Activity</button>
+      <br />
+      <button className="btn btn-primary" onClick={addAvtivity}>Add Activity</button>
     </div>
   );
 }
